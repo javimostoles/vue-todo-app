@@ -4,7 +4,7 @@ A simple to do app made with love 💚 and Vue 🖖
 
 I have created this app for educational purposes and to practice my Vue skills also participate in [#Hacktoberfest](https://hacktoberfest.digitalocean.com/) to win a cool t-shirt.
 
-![Screenshot](https://github.com/javimostoles/vue-todo-app/blob/main/screenshot.png?raw=true) 
+![Screenshot](https://github.com/javimostoles/vue-todo-app/blob/main/src/assetes/screenshot.png?raw=true) 
 
 
 ## Status
