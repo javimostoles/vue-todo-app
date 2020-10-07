@@ -4,7 +4,7 @@ A simple to do app made with love 💚 and Vue 🖖
 
 I have created this app for educational purposes and to practice my Vue skills also participate in [#Hacktoberfest](https://hacktoberfest.digitalocean.com/) to win a cool t-shirt.
 
-<!-- ![Screenshot](https://github.com/javimostoles/vue-todo-app/blob/main/screenshot.png?raw=true) -->
+![Screenshot](https://github.com/javimostoles/vue-todo-app/blob/main/screenshot.png?raw=true) 
 
 
 ## What can I do with this app?
@@ -13,17 +13,17 @@ Once running in your localhost, you can:
 
 - ➕ Add task
 - ✅ Complete task in case you want to make it available again, instead of delete it
-- 🚫 Delete task
+- 🗑️ Delete task
 
 > As this app is open source and has GPL-3.0 license, you can fork it, change it, style it 💅, etc
 
 ## Pending tasks
 
-- 🗹 Make forms accesible with screen readers
+- Make forms accessible with screen readers
 
-- 🗹 Save current tasks on localstorage
+- Save current tasks on local storage
 
-- 🗹 Add unit tests and #a11y tests
+- Add unit tests and #a11y tests
 
 <!-- ## How to use it? -->
 <!-- ### ⚡️ Live
