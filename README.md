@@ -7,6 +7,10 @@ I have created this app for educational purposes and to practice my Vue skills a
 ![Screenshot](https://github.com/javimostoles/vue-todo-app/blob/main/screenshot.png?raw=true) 
 
 
+## Status
+
+🔧 🔧 🔧  Work in progress
+
 ## What can I do with this app?
 
 Once running in your localhost, you can:
@@ -25,9 +29,10 @@ Once running in your localhost, you can:
 
 - Add unit tests and #a11y tests
 
-<!-- ## How to use it? -->
-<!-- ### ⚡️ Live
-[Click and see!](Pending) -->
+## How to use it? 
+
+### ⚡️ Live
+[Click and see!](https://javimostoles.github.io/vue-todo-app/)
 
 <!-- ### ✨ Quick start
 
