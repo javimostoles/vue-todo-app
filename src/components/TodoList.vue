@@ -12,25 +12,26 @@
 				@remove="removeTodo"
 			/>
 		</ul>
-		<p v-else>
-			Nothing left in the list. Add a new todo in the input below.
+		<p v-else class="message">
+			List empty. Good Job
 		</p>
-        <div class="newTask">
-            <BaseInputText 
-                v-model="newTodoText"
-                placeholder="New task"
-                @keydown.enter="addTodo"
-            />
-            <button @click="addTodo">+</button>
-        </div> 
+    <div id="newTask">
+        <BaseInputText 
+            v-model="newTodoText"
+            placeholder="New task"
+            @keydown.enter="addTodo"
+        />
+        <button @click="addTodo">+</button>
+    </div> 
 	</div>
   </div>
 
 </template>
 
 <script>
-    import BaseInputText from './BaseInputText.vue'
-    import TodoListItem from './TodoListItem.vue'
+
+import BaseInputText from './BaseInputText.vue'
+import TodoListItem from './TodoListItem.vue'
 let nextTodoId = 1
 
 export default {
@@ -42,19 +43,19 @@ export default {
 			newTodoText: '',
       todos: [
 				{
-					id: nextTodoId++,
-                    text: 'Learn Vue',
-                    done:true,
+					id:   nextTodoId++,
+          text: 'Learn Vue',
+          done: true,
 				},
 				{
-					id: nextTodoId++,
-                    text: 'Buy toilet paper',
-                    done:false,                   
+					id:   nextTodoId++,
+          text: 'Buy toilet paper',
+          done: false,                   
 				},
 				{
-					id: nextTodoId++,
-                    text: 'Do something awesome!',
-                    done:false,
+					id:   nextTodoId++,
+          text: 'Do something awesome!',
+          done: false,
 				}
 			]
     }
@@ -83,10 +84,15 @@ export default {
  
       #todoList {
           width: 300px;
+          min-height:200px;
           box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.15);
           border-radius: 8px;
           background: white;
           overflow: hidden;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
       }
       #todoList ul {
           list-style: none;
@@ -97,6 +103,8 @@ export default {
           align-items: center;
           line-height: 1;
           user-select: none;
+          font-size: 1.2em;
+          justify-content: space-between;
       }
       #todoList ul li:not(:last-child) {
           padding-bottom: 15px;
@@ -125,7 +133,7 @@ export default {
           content: "\f00c";
           font-family: "FontAwesome";
           margin: auto;
-          font-size: 0.8em;
+          font-size: 1.2em;
           color: #2ea44f;
           opacity: 0;
           transform: scale(0.5);
@@ -138,18 +146,8 @@ export default {
           opacity: 1;
           transform: scale(1);
       }
-      #todoList ul li i {
-          margin-left: auto;
-          padding-left: 15px;
-          opacity: 0;
-          color: #ff3c41;
-          transition: all 0.2s ease-in-out;
-          font-size: 1.2em;
-      }
-      #todoList ul li:hover i {
-          opacity: 1;
-          cursor: pointer;
-      }
+      
+      
       #todoList ul li span {
           position: relative;
       }
@@ -171,43 +169,12 @@ export default {
       #todoList ul li.done span:before {
           width: 100%;
       }
-      #todoList #newTask {
-          background: rgba(0, 0, 0, 0.05);
-          padding: 15px;
-          display: flex;
-      }
-      #todoList #newTask input {
-          flex: 1;
-          margin-right: 10px;
-          padding: 5px 10px;
-          border: none;
-          border-radius: 5px;
-          outline: none;
-          border-left: 2px solid #2ea44f;
-          font-family: 'Roboto', sans-serif;
-      }
-      #todoList #newTask button {
-          outline: none;
-          border: none;
-          border-radius: 50%;
-          font-size: 1.5em;
-          color: white;
-          background: #2ea44f;
-          display: flex;
-          width: 35px;
-          height: 35px;
-          transition: all 0.15s ease-in-out;
-      }
-      #todoList #newTask button span {
-          margin: auto;
-      }
-      #todoList #newTask button:hover {
-          cursor: pointer;
-          background: #047a39;
-      }
-      
       ::placeholder {
           color: rgba(0, 0, 0, 0.3);
+      }
+      .message{
+        padding: 2em;
+        font-size: 1.4em;
       }
  
 </style>
