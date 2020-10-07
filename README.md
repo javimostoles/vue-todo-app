@@ -8,8 +8,11 @@ I have created this app for educational purposes and to practice my Vue skills a
 
 
 ## Status
+🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧  
 
-🔧 🔧 🔧  Work in progress
+🔧 🔧 🔧  Work in progress  🔧 🔧 🔧 
+
+🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧 🔧  
 
 ## What can I do with this app?
 
@@ -23,18 +26,18 @@ Once running in your localhost, you can:
 
 ## Pending tasks
 
-- Make forms accessible with screen readers
+[ ] Make forms accessible with screen readers
 
-- Save current tasks on local storage
+[ ] Save current tasks on local storage
 
-- Add unit tests and #a11y tests
+[ ] Add unit tests and #a11y tests
 
 ## How to use it? 
 
 ### ⚡️ Live
 [Click and see!](https://javimostoles.github.io/vue-todo-app/)
 
-<!-- ### ✨ Quick start
+ ### ✨ Quick start
 
 1.  **Clone this repository.**
 
@@ -54,7 +57,25 @@ Once running in your localhost, you can:
 
 3.  **Running!**
 
-    Your site is now running at `http://localhost:3000` 🚀 -->
+    Your site is now running at `http://localhost:3000` 🚀 
+
+
+
+## Compiles and hot-reloads for development
+
+```
+npm run serve
+```
+
+## Compiles and minifies for production
+```
+npm run build
+```
+
+## Lints and fixes files
+```
+npm run lint
+```
 
 ## Dependencies
 

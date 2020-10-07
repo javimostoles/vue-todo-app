@@ -1,14 +1,6 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Todo App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <h1>Things Todo</h1>
+<template>
+  <div class="hello">
+ <h1>Things Todo</h1>
     <div>
         <div id="todoList">
             <ul>
@@ -34,7 +26,8 @@
             </div>
         </div>
     </div>
+  </div>
+</template>
 
-</body>
 
-</html>
+
