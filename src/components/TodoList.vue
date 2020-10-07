@@ -1,33 +1,83 @@
 <template>
   <div class="hello">
- <h1>Things Todo</h1>
-    <div>
-        <div id="todoList">
-            <ul>
-                <li class="done">
-                    <div class="checkBox done"></div>
-                    <span>Learn Vue</span>
-                    <i class="fa fa-trash-o"></i>
-                </li>
-                <li>
-                    <div class="checkBox"></div>
-                    <span>Buy toilet paper</span>
-                    <i class="fa fa-trash-o"></i>
-                </li>
-                <li>
-                    <div class="checkBox"></div>
-                    <span>Do something awesome!</span>
-                    <i class="fa fa-trash-o"></i>
-                </li>
-            </ul>
-            <div id="newTask">
-                <input type="text" placeholder="New task">
-                <button><span>+</span></button>
-            </div>
-        </div>
-    </div>
+    <h1>Things Todo</h1>
+        
+      <div id="todoList">
+		
+		<ul v-if="todos.length">
+			<TodoListItem
+				v-for="todo in todos"
+				:key="todo.id"
+				:todo="todo"
+				@remove="removeTodo"
+			/>
+		</ul>
+		<p v-else>
+			Nothing left in the list. Add a new todo in the input below.
+		</p>
+        <div class="newTask">
+            <BaseInputText 
+                v-model="newTodoText"
+                placeholder="New task"
+                @keydown.enter="addTodo"
+            />
+            <button @click="addTodo">+</button>
+        </div> 
+	</div>
   </div>
+
 </template>
+
+<script>
+    import BaseInputText from './BaseInputText.vue'
+    import TodoListItem from './TodoListItem.vue'
+let nextTodoId = 1
+
+export default {
+	components: {
+		BaseInputText, TodoListItem
+	},
+  data () {
+    return {
+			newTodoText: '',
+      todos: [
+				{
+					id: nextTodoId++,
+                    text: 'Learn Vue',
+                    done:true,
+				},
+				{
+					id: nextTodoId++,
+                    text: 'Buy toilet paper',
+                    done:false,                   
+				},
+				{
+					id: nextTodoId++,
+                    text: 'Do something awesome!',
+                    done:false,
+				}
+			]
+    }
+  },
+	methods: {
+		addTodo () {
+			const trimmedText = this.newTodoText.trim()
+			if (trimmedText) {
+				this.todos.push({
+					id: nextTodoId++,
+					text: trimmedText
+				})
+				this.newTodoText = ''
+			}
+		},
+		removeTodo (idToRemove) {
+			this.todos = this.todos.filter(todo => {
+				return todo.id !== idToRemove
+			})
+		}
+	}
+}
+</script>  
 
 <style scoped>
  
@@ -159,7 +209,5 @@
       ::placeholder {
           color: rgba(0, 0, 0, 0.3);
       }
-
+ 
 </style>
-
-
